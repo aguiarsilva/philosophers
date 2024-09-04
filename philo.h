@@ -53,3 +53,8 @@ typedef struct s_data
     int                 run;
     struct  timeval     t_start;
 }   t_data;
+
+int     free_data_mutexes(t_data *data);
+int     valid_args(int argc, char **argv);
+
+#endif
