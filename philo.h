@@ -56,5 +56,6 @@ typedef struct s_data
 
 int     free_data_mutexes(t_data *data);
 int     valid_args(int argc, char **argv);
+int     ft_atoi(char *str);
 
 #endif
