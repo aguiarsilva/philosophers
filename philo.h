@@ -14,11 +14,11 @@
 # define PHILO_H
 
 #include <stdio.h>
-#include <limits.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <sys/time.h>
-#include <pthread.h>
+#include <limits.h> // INT_MAX INT_MIN
+#include <unistd.h> //write usleep
+#include <stdlib.h> //malloc free EXIT_SUCCESS EXIT_FAILURE
+#include <sys/time.h> // gettimeofday
+#include <pthread.h> //mutex: init destroy lock unlock && threads: create join detach
 
 # define PHILO_FORK 1
 # define PHILO_EATING 2
@@ -58,5 +58,11 @@ int     free_data_mutexes(t_data *data);
 int     valid_args(int argc, char **argv);
 int     ft_atoi(char *str);
 int     args_initialize(t_data *data, int argc, char **argv);
+int     free_philos(t_philo *philos, int n);
+int     free_forks(pthread_mutex_t *forks, int n);
+int     free_data(t_data *data);
+time_t  get_time_ms(void);
+int     philos_initialize(t_data *data);
+
 
 #endif
