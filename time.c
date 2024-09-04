@@ -19,3 +19,35 @@ time_t  get_time_ms(void)
     gettimeofday(&val, NULL);
     return ((val.tv_sec * 1000) + (val.tv_usec / 1000));
 }
+
+int     time_diff(struct timeval *begin)
+{
+    struct timeval      now;
+    int                 time;
+
+    gettimeofday(&now, NULL);
+    time = (now.tv_sec - begin->tv_sec) * 1000 + \
+            (now.tv_usec - begin->tv_usec) / 1000;
+    return (time);
+}
+
+void  msleep(long ms, t_data *data)
+{
+    struct timeval      begin;
+    long                res;
+
+    gettimeofday(&begin, NULL);
+    res = 0;
+    while (res < ms)
+    {
+        pthread_mutex_lock(&data->running);
+        if (!data->run)
+        {
+            pthread_mutex_unlock(&data->running);
+            return ;
+        }
+        pthread_mutex_unlock(&data->running);
+        usleep(100);
+        res = time_diff(&begin);
+    }
+}

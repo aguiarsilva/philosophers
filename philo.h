@@ -63,6 +63,10 @@ int     free_forks(pthread_mutex_t *forks, int n);
 int     free_data(t_data *data);
 time_t  get_time_ms(void);
 int     philos_initialize(t_data *data);
+void    monitor_philo(t_data *data);
+int     time_diff(struct timeval *begin);
+void    msleep(long ms, t_data *data);
+int     running(t_data *data);
 
 
 #endif
