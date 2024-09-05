@@ -12,7 +12,15 @@
 
 NAME = philo
 
-SRC	= 
+SRC	= 	philo.c \
+		args_init.c \
+		check.c	\
+		control.c \
+		free.c \
+		monitor_philo.c \
+		philos_init.c \
+		time.c \
+		check.c
 
 OBJS = $(SRC:.c=.o)
 
