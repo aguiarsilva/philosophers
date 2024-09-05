@@ -22,7 +22,7 @@
 
 # define PHILO_FORK 1
 # define PHILO_EATING 2
-# define PHILO_SLEPPING 3
+# define PHILO_SLEEPING 3
 # define PHILO_THINKING 4
 # define PHILO_DIED 5
 
@@ -69,6 +69,7 @@ void    msleep(long ms, t_data *data);
 int     running(t_data *data);
 void    action_print(t_data *data, t_philo *philo, int sig);
 void    treat_action(t_data *data, t_philo *philo, int sig);
+void    *routine_philo(void *pt_philo);
 
 
 #endif

@@ -24,7 +24,7 @@ int main(int argc, char **argv)
         return (EXIT_FAILURE);
     if (args_initialize(&data, argc, argv) == EXIT_FAILURE)
         return (EXIT_FAILURE);
-    if (philo_initialize(&data) == EXIT_FAILURE)
+    if (philos_initialize(&data) == EXIT_FAILURE)
         return (EXIT_FAILURE);
     while (i < data.n_philo && !pthread_join(data.philos[i].thread, NULL))
         i++;
