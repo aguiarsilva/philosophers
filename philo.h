@@ -67,6 +67,8 @@ void    monitor_philo(t_data *data);
 int     time_diff(struct timeval *begin);
 void    msleep(long ms, t_data *data);
 int     running(t_data *data);
+void    action_print(t_data *data, t_philo *philo, int sig);
+void    treat_action(t_data *data, t_philo *philo, int sig);
 
 
 #endif
