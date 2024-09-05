@@ -27,10 +27,10 @@ static int      make_forks(t_data *data, int n_philo)
     {
         pthread_mutex_init(&data->philos[i].t_last_meal_mutex, NULL);
         pthread_mutex_init(&data->philos[i].protection, NULL);
-        pthread_mutex_init(&data->philos[i], NULL);
+        pthread_mutex_init(&data->forks[i], NULL);
         i++;
     }
-    return (EXIT_SUCCES);
+    return (EXIT_SUCCESS);
 }
 
 static int      r_fork(t_data *data, int i)
@@ -43,7 +43,7 @@ int     philos_initialize(t_data *data)
     int     i;
 
     i = 0;
-    data->philos = malloc(sizeof(t_philos) * (data->n_philo));
+    data->philos = malloc(sizeof(t_philo) * (data->n_philo));
     if (!data->philos)
         return (free_data_mutexes(data));
     if (make_forks(data, data->n_philo) == EXIT_FAILURE)
@@ -55,8 +55,8 @@ int     philos_initialize(t_data *data)
         data->philos[i].data = data;
         data->philos[i].id = i + 1;
         data->philos[i].eated = 0;
-        data->philos[i].fork_l = &data->forks[i];
-        data->philos[i].fork_r = &data->forks[r_fork(data, i)];
+        data->philos[i].fork_left = &data->forks[i];
+        data->philos[i].fork_right = &data->forks[r_fork(data, i)];
         gettimeofday(&data->philos[i].t_last_meal, NULL);
         if (pthread_create(&data->philos[i].thread, NULL, &philo_routine,
                 (void *)&data->philos[i]))

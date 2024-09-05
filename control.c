@@ -14,7 +14,7 @@
 
 int     running(t_data *data)
 {
-    pthread_mutex_lock(&data->running)
+    pthread_mutex_lock(&data->running);
     if (data->run)
     {
         pthread_mutex_unlock(&data->running);

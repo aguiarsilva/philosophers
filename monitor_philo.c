@@ -24,7 +24,7 @@ static int      is_dead(t_data *data, t_philo *philo)
         pthread_mutex_lock(&data->running);
         data->run = 0;
         pthread_mutex_unlock(&data->running);
-        print_action(data, philo, PHILO_DIED);
+        action_print(data, philo, PHILO_DIED);
         return (1);
     }
     return (0);
