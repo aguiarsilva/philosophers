@@ -58,7 +58,7 @@ int     philos_initialize(t_data *data)
         data->philos[i].fork_left = &data->forks[i];
         data->philos[i].fork_right = &data->forks[r_fork(data, i)];
         gettimeofday(&data->philos[i].t_last_meal, NULL);
-        if (pthread_create(&data->philos[i].thread, NULL, &philo_routine,
+        if (pthread_create(&data->philos[i].thread, NULL, &routine_philo,
                 (void *)&data->philos[i]))
             return(free_data(data));
         i++;
