@@ -56,7 +56,7 @@ static int      valid_argv(char **argv)
     return (EXIT_SUCCESS);
 }
 
-int     valid_args(int argc, char **argv)
+int     valid_argcv(int argc, char **argv)
 {
     if (valid_argc(argc) == EXIT_FAILURE)
         return (EXIT_FAILURE);

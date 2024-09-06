@@ -20,7 +20,7 @@ int main(int argc, char **argv)
     i = 0;
     data.philos = NULL;
     data.forks = NULL;
-    if (valid_args(argc, argv) == EXIT_FAILURE)
+    if (valid_argcv(argc, argv) == EXIT_FAILURE)
         return (EXIT_FAILURE);
     if (args_initialize(&data, argc, argv) == EXIT_FAILURE)
         return (EXIT_FAILURE);

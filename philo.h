@@ -54,22 +54,28 @@ typedef struct s_data
     struct  timeval     t_start;
 }   t_data;
 
-int     free_data_mutexes(t_data *data);
-int     valid_args(int argc, char **argv);
-int     ft_atoi(char *str);
-int     args_initialize(t_data *data, int argc, char **argv);
-int     free_philos(t_philo *philos, int n);
-int     free_forks(pthread_mutex_t *forks, int n);
-int     free_data(t_data *data);
 time_t  get_time_ms(void);
-int     philos_initialize(t_data *data);
-void    monitor_philo(t_data *data);
 int     time_diff(struct timeval *begin);
 void    msleep(long ms, t_data *data);
+int     ft_atoi(char *str);
+int     valid_argcv(int argc, char **argv);
+void    monitor_philo(t_data *data);
+void    treat_action(t_data *data, t_philo *philo, int sig);
+int     args_initialize(t_data *data, int argc, char **argv);
 int     running(t_data *data);
 void    action_print(t_data *data, t_philo *philo, int sig);
-void    treat_action(t_data *data, t_philo *philo, int sig);
 void    *routine_philo(void *pt_philo);
+int     philos_initialize(t_data *data);
+int     free_data(t_data *data);
+int     free_forks(pthread_mutex_t *forks, int n);
+int     free_philos(t_philo *philos, int n);
+int     free_data_mutexes(t_data *data);
+
+
+
+
+
+
 
 
 #endif
