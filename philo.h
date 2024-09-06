@@ -72,10 +72,4 @@ int     free_philos(t_philo *philos, int n);
 int     free_data_mutexes(t_data *data);
 
 
-
-
-
-
-
-
 #endif

@@ -20,11 +20,11 @@ SRC	= 	philo.c \
 		monitor_philo.c \
 		philos_init.c \
 		time.c \
-		check.c
+		utils.c
 
 OBJS = $(SRC:.c=.o)
 
-CC = gcc
+CC = cc
 RM = rm -f
 CFLAGS = -Wall -Werror -Wextra
 DEBUGFLAG = -fsanitize=thread -g
