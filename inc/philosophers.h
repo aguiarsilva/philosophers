@@ -6,7 +6,7 @@
 /*   By: baguiar- <baguiar-@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 12:11:18 by baguiar-          #+#    #+#             */
-/*   Updated: 2024/10/01 11:03:09 by baguiar-         ###   ########.fr       */
+/*   Updated: 2024/10/01 11:24:38 by baguiar-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,6 +129,5 @@ long	ft_atol(const char *nptr);
 int		ft_is_digit(char c);
 long	get_time(int time_cd);
 void	ft_usleep(long msec, t_data *data);
-
 
 #endif

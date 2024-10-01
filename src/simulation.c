@@ -6,7 +6,7 @@
 /*   By: baguiar- <baguiar-@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 13:39:43 by baguiar-          #+#    #+#             */
-/*   Updated: 2024/10/01 11:14:35 by baguiar-         ###   ########.fr       */
+/*   Updated: 2024/10/01 11:25:42 by baguiar-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	stop_sim(t_data *data)
 	int	i;
 
 	i = 0;
-
 	while (i < data->n_philos)
 	{
 		pthread_join(data->philos[i].thread, NULL);

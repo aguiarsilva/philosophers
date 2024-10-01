@@ -6,7 +6,7 @@
 /*   By: baguiar- <baguiar-@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 23:37:13 by baguiar-          #+#    #+#             */
-/*   Updated: 2024/10/01 11:17:50 by baguiar-         ###   ########.fr       */
+/*   Updated: 2024/10/01 11:25:13 by baguiar-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,3 @@ void	set_long(t_mtx *mutex, long *dest, long val)
 	*dest = val;
 	pthread_mutex_unlock(mutex);
 }
-

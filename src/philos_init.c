@@ -6,7 +6,7 @@
 /*   By: baguiar- <baguiar-@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 13:04:35 by baguiar-          #+#    #+#             */
-/*   Updated: 2024/10/01 11:12:40 by baguiar-         ###   ########.fr       */
+/*   Updated: 2024/10/01 11:25:02 by baguiar-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,3 @@ bool	init_data(t_data *data)
 	philos_init(data);
 	return (true);
 }
-

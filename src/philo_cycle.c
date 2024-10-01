@@ -6,7 +6,7 @@
 /*   By: baguiar- <baguiar-@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 14:03:35 by baguiar-          #+#    #+#             */
-/*   Updated: 2024/10/01 11:11:38 by baguiar-         ###   ########.fr       */
+/*   Updated: 2024/10/01 11:24:59 by baguiar-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,3 @@ void	*philo_cycle(void *arg)
 	philo_routine(philo);
 	return (NULL);
 }
-

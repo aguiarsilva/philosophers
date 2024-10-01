@@ -6,7 +6,7 @@
 /*   By: baguiar- <baguiar-@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 13:29:51 by baguiar-          #+#    #+#             */
-/*   Updated: 2024/10/01 11:10:49 by baguiar-         ###   ########.fr       */
+/*   Updated: 2024/10/01 11:24:55 by baguiar-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,3 @@ int	main(int argc, char **argv)
 	free_data(&data);
 	return (0);
 }
-
