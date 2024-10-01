@@ -6,13 +6,13 @@
 /*   By: baguiar- <baguiar-@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 14:53:41 by baguiar-          #+#    #+#             */
-/*   Updated: 2024/10/01 11:10:14 by baguiar-         ###   ########.fr       */
+/*   Updated: 2024/10/01 11:23:24 by baguiar-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/philosophers.h"
 
-void	ist_forks(t_philo *philo, t_fork *forks, int philo_pos)
+void	dist_forks(t_philo *philo, t_fork *forks, int philo_pos)
 {
 	int	num_philo;
 
