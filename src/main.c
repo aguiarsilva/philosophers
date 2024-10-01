@@ -6,7 +6,7 @@
 /*   By: baguiar- <baguiar-@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 13:29:51 by baguiar-          #+#    #+#             */
-/*   Updated: 2024/09/18 11:03:08 by baguiar-         ###   ########.fr       */
+/*   Updated: 2024/10/01 11:10:49 by baguiar-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,16 @@
  * end of the simulation */
 int	main(int argc, char **argv)
 {
-	t_data  data;
+	t_data	data;
 
-    if (argc != 5 && argc != 6)
-        return (ft_error("Wrong number of args: ./philo + 4 or 5 args!\n"));
-    save_args(argc, argv, &data);
-    if (check_args(&data) == 1)
-        return (1);
-    init_data(&data);
-    dinner_simulation(&data);
-    free_data(&data);
-    return (0);
+	if (argc != 5 && argc != 6)
+		return (ft_error("Wrong number of args: ./philo + 4 or 5 args!\n"));
+	save_args(argc, argv, &data);
+	if (check_args(&data) == 1)
+		return (1);
+	init_data(&data);
+	dinner_simulation(&data);
+	free_data(&data);
+	return (0);
 }
 
